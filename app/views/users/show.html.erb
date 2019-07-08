@@ -1,17 +1,21 @@
 <h1>Welcome! <%=@user.name%> </h1>
 <h2>Age: <%=@user.age%></h2>
 
-<ol>
+<ul>
   <%if @orders.length > 0%>
 
 
     <%@orders.each do |order|%>
     <h2>Order #<%= @count %></h2>
+      <%if order.drinks.length > 0%>
       <h3>Drinks: </h3>
+      <%end%>
        <%order.drinks.each do |drink| %>
         <li><%= drink.name%>
           <%end%></li>
-          <h3>Food:</h3>
+          <%if order.foods.length > 0%>
+          <h3>Food: </h3>
+          <%end%>
       <%order.foods.each do |food| %>
         <li><%= food.name%>
       <%end%></li>
@@ -22,4 +26,4 @@
     <%end%>
     <%end%>
 
-</ol>
+</ul>
