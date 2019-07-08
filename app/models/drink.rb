@@ -1,3 +1,4 @@
 class Drink < ApplicationRecord
-    has_and_belongs_to_many :orders
+    has_many :drink_orders
+    has_many :orders, through: :drink_orders
 end
