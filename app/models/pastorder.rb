@@ -1,0 +1,2 @@
+class Pastorder < ApplicationRecord
+end
