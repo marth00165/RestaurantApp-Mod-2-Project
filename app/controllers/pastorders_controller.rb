@@ -1,2 +1,0 @@
-class PastordersController < ApplicationController
-end

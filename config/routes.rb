@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :pastorders
   resources :orders
   resources :drinks
   resources :foods
