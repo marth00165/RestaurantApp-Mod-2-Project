@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_235029) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.boolean "complete"
     t.integer "user_id"
+    t.boolean "complete"
   end
 
   create_table "users", force: :cascade do |t|
