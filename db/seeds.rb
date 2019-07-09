@@ -30,10 +30,11 @@ foods =
   {name:"Grilled Chicken",price:16.50,imgurl:"https://res.cloudinary.com/grubhub/image/upload/f_auto,fl_lossy,q_100,c_fill,w_376/vdgbtb7abwbmny8sk3qv",desc:"A Thai spin on an Indian favorite. Tender chicken marinated in a sweet and spicy mixture of coconut milk, yellow curry and other flavorful spices and then grilled. Does not come with rice. If you would like rice, it will be side order please. Gluten free."}
 ]
 
-foods.each do |food| {
+foods.each do |food|
   Food.create(food)
-}
 end
+
+
 drinks = [
   {name:"Coke",price:1.50,imgurl:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSWMLHvz3tfoG32TxdmJ7hWPzWH17F2DOd_Hggk2joIhp8vbn9l5QPE64W0Rv-l7wPesPs6IidsaEmur0ZPGlXBErrsbX4WNw1SpxBCfxRZtBZL-SzHaMkr-g&usqp=CAc",desc:"Can of Coke soda"},
   {name:"Long Island",price:12.00,imgurl:"http://www.thedrinkkings.com/wp-content/uploads/2014/06/Long-Island-Iced-Tea-4-630-630x867.jpg",desc:"Long Island Iced Tea"},
@@ -47,9 +48,8 @@ drinks = [
   {name:"Dank",price:420.00,imgurl:"https://i.ytimg.com/vi/hm27yNEMOf8/maxresdefault.jpg",desc:"DANK ASS DRINK"}
 ]
 
-drinks.each do |drink|{
+drinks.each do |drink|
   Drink.create(drink)
-}
 end
 
 3.times do
