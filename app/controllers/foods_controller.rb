@@ -1,10 +1,11 @@
 class FoodsController < ApplicationController
+  before_action :set_food, only: [:show]
     def add_food
         @food = Food.find(params[:id])
         if session.include? :user_id
             @cur_user = User.find(session[:user_id])
         end
-        @order = @cur_user.orders.find do |order| 
+        @order = @cur_user.orders.find do |order|
             order.complete == false
         end
         if !@order
@@ -13,5 +14,11 @@ class FoodsController < ApplicationController
         end
         @order.foods << @food
         redirect_to @order
+    end
+
+    private
+
+    def set_food
+      @food = Food.find_by(params[:id])
     end
 end

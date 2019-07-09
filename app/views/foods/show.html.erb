@@ -1,0 +1,19 @@
+<h1><%=@food.name%></h1> <br><br>
+<%=#img src="#{@food.imgurl}"%><br><br>
+
+
+Description: <%= @food.desc %><br><br>
+
+
+
+
+
+
+Price Per Food: <%=@food.price%>
+
+
+
+
+
+<%= link_to "Home", root_path %>
+<%= link_to "add to order", add_food_path(@food) %>
