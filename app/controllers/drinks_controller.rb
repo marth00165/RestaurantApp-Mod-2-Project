@@ -1,5 +1,6 @@
 class DrinksController < ApplicationController
-    def add_drink
+  before_action :set_drink, only: [:show]
+  def add_drink
         @drink = Drink.find(params[:id])
         if session.include? :user_id
             @cur_user = User.find(session[:user_id])
@@ -14,4 +15,12 @@ class DrinksController < ApplicationController
         @order.drinks << @drink
         redirect_to @order
     end
+
+
+  private
+
+  def set_drink
+    @drink = Drink.find_by(params[:id])
+  end
+
 end
