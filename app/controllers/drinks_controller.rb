@@ -20,7 +20,7 @@ class DrinksController < ApplicationController
   private
 
   def set_drink
-    @drink = Drink.find_by(params[:id])
+    @drink = Drink.find(params[:id])
   end
 
 end
