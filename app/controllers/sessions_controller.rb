@@ -13,12 +13,14 @@ class SessionsController < ApplicationController
       redirect_to user_path(user)
 
    else
-     byebug
+     
      flash[:danger] = 'Invalid email/password combination'# Create an error message.
      render 'new'
    end
  end
 
   def destroy
+    session.clear
   end
+
 end

@@ -1,5 +1,9 @@
 class FoodsController < ApplicationController
   before_action :set_food, only: [:show]
+
+    def index
+
+    end
     def add_food
         @food = Food.find(params[:id])
         if session.include? :user_id
