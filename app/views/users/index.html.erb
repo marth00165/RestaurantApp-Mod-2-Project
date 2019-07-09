@@ -1,4 +1,16 @@
+<br><br><br>
+<%@foods.each do |food|%>
+<br>
+<%= link_to food.name, food %>
+<p><%= food.price.to_s %> each </p>
 
+<%= food.imgurl %><br>
+<%= link_to "Add to Order", add_food_path(food) %>
+<br>
+<%end%>
+
+
+<h1>DON'T DELETE THIS FOR NOW, ABILITY TO SEE USERBASE</h1>
 <%@users.each do |user|%>
 <h4><%= link_to user.name, user%></h4> <br>  <br> <br>
 
