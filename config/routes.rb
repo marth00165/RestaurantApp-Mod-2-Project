@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/drinks/:id/add", to: "drinks#add_drink", as: "add_drink"
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   resources :cards
   resources :users
 
