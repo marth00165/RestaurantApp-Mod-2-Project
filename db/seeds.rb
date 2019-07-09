@@ -14,8 +14,8 @@ DrinkOrder.destroy_all
 FoodOrder.destroy_all
 Card.destroy_all
 
-User.create(name: "Rohit Pratti", username: "Marth00165", age: 23)
-User.create(name: "Philip Sterling", username: "Zanith", age: 24)
+User.create(name: "Rohit Pratti", username: "Marth00165", password: "abc", password_confirmation: "abc", age: 23)
+User.create(name: "Philip Sterling", username: "Zanith", password: "abc", password_confirmation: "abc", age: 24)
 
 3.times do
     Card.create(

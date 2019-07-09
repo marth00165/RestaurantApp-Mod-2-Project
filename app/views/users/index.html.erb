@@ -9,6 +9,16 @@
 <%= link_to "Add to Order", add_food_path(food) %>
 <br>
 <%end%>
+<br><br><br>
+<%@drinks.each do |drink|%>
+<br>
+<%= link_to drink.name, drink %>
+<p><%= drink.price.to_s %> each </p>
+
+<%= drink.imgurl %><br>
+<%= link_to "Add to Order", add_drink_path(drink) %>
+<br>
+<%end%>
 
 
 <h1>DON'T DELETE THIS FOR NOW, ABILITY TO SEE USERBASE</h1>

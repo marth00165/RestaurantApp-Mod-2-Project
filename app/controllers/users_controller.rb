@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:show, :destroy, :edit, :update]
     before_action :user_params, only: [:create]
     def index
-        session[:user_id] = User.all.first.id
         if session.include? :user_id
             @cur_user = User.find(session[:user_id])
         end
@@ -53,6 +52,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:age, :name, :password,:password_confirmation, :username)
+      params.require(:user).permit(:age, :name, :password, :password_confirmation, :username)
     end
 end

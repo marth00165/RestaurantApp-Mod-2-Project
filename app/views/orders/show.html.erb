@@ -1,7 +1,9 @@
 <p>This is current order</p>
+<h3>Drinks: </h3><br>
 <%@drinks.each do |drink|%>
 <%=link_to drink.name, drink%>
 <%end%>
+<h3>Food: </h3><br>
 <%@foods.each do |food|%>
 <%=link_to food.name, food%>
 <%end%>
