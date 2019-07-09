@@ -4,13 +4,15 @@ class UsersController < ApplicationController
     def index
         if session.include? :user_id
             @cur_user = User.find(session[:user_id])
-        end
-        @order = @cur_user.orders.find do |order| 
-            order.complete == false
+            @order = @cur_user.orders.find do |order| 
+              order.complete == false
+          end
         end
         if !@order
-            @order = Order.new(complete: false)
+            @order = Order.create(complete: false)
+            if session.include? :user_id
             @cur_user.orders << @order
+            end
         end
         @foods = Food.all
         @drinks = Drink.all
@@ -28,9 +30,13 @@ class UsersController < ApplicationController
     end
 
     def show
-     @count = 1
-     @orders = @user.orders
-     @orders = @orders.select{|order| order.complete}
+      if current_user.id == params[:id].to_i
+        @count = 1
+        @orders = @user.orders
+        @orders = @orders.select{|order| order.complete}
+      else
+        redirect_to root_path
+      end
     end
 
     def update
