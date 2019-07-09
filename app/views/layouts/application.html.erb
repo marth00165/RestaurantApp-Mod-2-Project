@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <% if !session.include? :user_id%>
+      <%= link_to "Create New Account", new_user_path %>
+    <%end%>
     <%= yield %>
   </body>
 </html>
