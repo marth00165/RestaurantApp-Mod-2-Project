@@ -2,11 +2,15 @@
 <h3>Drinks: </h3><br>
 <%@drinks.each do |drink|%>
 <%=link_to drink.name, drink%>
+<%= '%.2f' % drink.price.to_d%><br>
 <%end%>
 <h3>Food: </h3><br>
 <%@foods.each do |food|%>
 <%=link_to food.name, food%>
+<%= '%.2f' % food.price.to_d%><br>
 <%end%>
-
+<h3>Total Price: </h3>
+<%= '%.2f' % @total_price.to_d%>
+<br>
 <%= link_to "Checkout", checkout_path%>
 

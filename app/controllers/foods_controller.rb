@@ -33,7 +33,6 @@ class FoodsController < ApplicationController
           @cur_user.orders << @order
       end
       a = @order.foods
-      byebug
       a.delete_at(a.index(@food))
       redirect_to @order
 

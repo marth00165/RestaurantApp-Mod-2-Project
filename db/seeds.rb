@@ -18,16 +18,16 @@ User.create(name: "Rohit Pratti", username: "Marth00165", password: "abc", passw
 User.create(name: "Philip Sterling", username: "Zanith", password: "abc", password_confirmation: "abc", age: 24)
 
 foods =
- [{name:"Green Curry",price:13.95,imgurl:"/assets/images/pictures1",desc:"Green curry paste with bamboo shoots, bell peppers, basil, eggplant and coconut milk. Sweeter than red curry. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
-  {name:"Red Curry",price:13.95,imgurl:"",desc:"Red curry with bamboo shoots, bell peppers, basil and coconut milk. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
-  {name:"Pahd Thai",price:12.95,imgurl:"",desc:"Stir fried rice noodles with egg, ground peanuts, fresh bean sprouts, green onions and carrot. Gluten free."},
-  {name:"Chicken Noodles",price:12.95,imgurl:"",desc:"Stir fried wide rice noodles with chicken, egg, tomatoes, pineapples and carrots."},
-  {name:"Stir Fried Beef Salad",price:13.75,imgurl:"",desc:"Stir fried beef with lettuce, onions, cucumbers, tomatoes and lime juice."},
-  {name:"Tom Yum Soup",price:11.50,imgurl:"",desc:"Hot and sour soup with mushrooms, lemongrass, lime leaves and chili paste. Gluten free."},
-  {name:"Deep Fried Spring Rolls",price:7.95,imgurl:"",desc:"4 pieces. Mixed vegetables wrapped in spring roll wrappers and fried."},
-  {name:"Blanket Prawns",price:9.50,imgurl:"",desc:"Prawns with cream cheese wrapped in spring roll wrappers and fried. Served with tangy plum sauce."},
-  {name:"Chicken Satay",price:9.75,imgurl:"",desc:"4 skewers. Marinated in curry powder and coconut milk. Grilled and served with mild spicy peanut sauce and pickled cucumbers. Gluten free."},
-  {name:"Grilled Chicken",price:16.50,imgurl:"",desc:"A Thai spin on an Indian favorite. Tender chicken marinated in a sweet and spicy mixture of coconut milk, yellow curry and other flavorful spices and then grilled. Does not come with rice. If you would like rice, it will be side order please. Gluten free."}
+ [{name:"Green Curry",price:13.95,imgurl:"pictures/1.webp",desc:"Green curry paste with bamboo shoots, bell peppers, basil, eggplant and coconut milk. Sweeter than red curry. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
+  {name:"Red Curry",price:13.95,imgurl:"pictures/2.webp",desc:"Red curry with bamboo shoots, bell peppers, basil and coconut milk. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
+  {name:"Pahd Thai",price:12.95,imgurl:"pictures/3.webp",desc:"Stir fried rice noodles with egg, ground peanuts, fresh bean sprouts, green onions and carrot. Gluten free."},
+  {name:"Chicken Noodles",price:12.95,imgurl:"pictures/4.webp",desc:"Stir fried wide rice noodles with chicken, egg, tomatoes, pineapples and carrots."},
+  {name:"Stir Fried Beef Salad",price:13.75,imgurl:"pictures/6.jpg",desc:"Stir fried beef with lettuce, onions, cucumbers, tomatoes and lime juice."},
+  {name:"Tom Yum Soup",price:11.50,imgurl:"pictures/7.webp",desc:"Hot and sour soup with mushrooms, lemongrass, lime leaves and chili paste. Gluten free."},
+  {name:"Deep Fried Spring Rolls",price:7.95,imgurl:"pictures/8.webp",desc:"4 pieces. Mixed vegetables wrapped in spring roll wrappers and fried."},
+  {name:"Blanket Prawns",price:9.50,imgurl:"pictures/9.0.webp",desc:"Prawns with cream cheese wrapped in spring roll wrappers and fried. Served with tangy plum sauce."},
+  {name:"Chicken Satay",price:9.75,imgurl:"pictures/10.webp",desc:"4 skewers. Marinated in curry powder and coconut milk. Grilled and served with mild spicy peanut sauce and pickled cucumbers. Gluten free."},
+  {name:"Grilled Chicken",price:16.50,imgurl:"pictures/11.webp",desc:"A Thai spin on an Indian favorite. Tender chicken marinated in a sweet and spicy mixture of coconut milk, yellow curry and other flavorful spices and then grilled. Does not come with rice. If you would like rice, it will be side order please. Gluten free."}
 ]
 
 foods.each do |food|
@@ -36,16 +36,16 @@ end
 
 
 drinks = [
-  {name:"Coke",price:1.50,imgurl:"",desc:"Can of Coke soda"},
-  {name:"Long Island",price:12.00,imgurl:"",desc:"Long Island Iced Tea"},
-  {name:"Water",price:1.00,imgurl:"",desc:"Quench yo thirst boul"},
-  {name:"Daiquiri",price:15.00,imgurl:"",desc:"Cocktail with cranberry juice"},
-  {name:"Orange Juice",price:5.00,imgurl:"",desc:"Freshly Squeezed Orange Juice"},
-  {name:"Cranberry Juice",price:5.00,imgurl:"",desc:"Cranberry Juice with Ice"},
-  {name:"Ro-Special",price:6.90,imgurl:"",desc:"Classic Trash Can with a Rohitwist"},
-  {name:"Philip-Drank",price:4.20,imgurl:"",desc:"Some Apple Juice"},
-  {name:"Boba Tea",price:5.00,imgurl:"",desc:"Boba Teas So YUMMY!"},
-  {name:"Dank",price:420.00,imgurl:"",desc:"DANK ASS DRINK"}
+  {name:"Coke",price:1.50,imgurl:"pictures/drink1.webp",desc:"Can of Coke soda"},
+  {name:"Long Island",price:12.00,imgurl:"pictures/drink2.jpg",desc:"Long Island Iced Tea"},
+  {name:"Water",price:1.00,imgurl:"pictures/drink3.jpg",desc:"Quench yo thirst boul"},
+  {name:"Daiquiri",price:15.00,imgurl:"pictures/drink4.jpeg",desc:"Cocktail with cranberry juice"},
+  {name:"Orange Juice",price:5.00,imgurl:"pictures/drink5.jpg",desc:"Freshly Squeezed Orange Juice"},
+  {name:"Cranberry Juice",price:5.00,imgurl:"pictures/drink6.jpg",desc:"Cranberry Juice with Ice"},
+  {name:"Ro-Special",price:6.90,imgurl:"pictures/drink7.jpg",desc:"Classic Trash Can with a Rohitwist"},
+  {name:"Philip-Drank",price:4.20,imgurl:"pictures/drink8.jpg",desc:"Some Apple Juice"},
+  {name:"Boba Tea",price:5.00,imgurl:"pictures/drink9.jpg",desc:"Boba Teas So YUMMY!"},
+  {name:"Dank",price:420.00,imgurl:"pictures/drink10.jpg",desc:"DANK ASS DRINK"}
 ]
 
 drinks.each do |drink|
