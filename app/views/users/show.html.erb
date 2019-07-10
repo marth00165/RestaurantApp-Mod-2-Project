@@ -1,37 +1,48 @@
 
-<header>
+<div class="jawn">
   <h1>Welcome <%=@user.name%> !</h1>
   <h2>Age: <%=@user.age%></h2>
 
-</header>
+</div>
 
 <body>
 <div class="content">
 
 
-<ul>
-
 
   <%if @orders.length > 0%>
     <%@orders.each do |order|%>
-    <div class="order">
 
+
+    <div class="order">
 
     <h2>Order #<%= @count %></h2>
       <%if order.drinks.length > 0%>
+      <div class="drinks">
+
+
       <h3>Drinks: </h3>
-      <%end%>
+      <%end%><ul>
        <%order.drinks.each do |drink| %>
-        <li><%= drink.name%>
-          <%end%></li>
+        <li><%= drink.name%></li>
+          <%end%>
+          </ul>
+            </div>
+
+
+            <div class="foods">
+
+
           <%if order.foods.length > 0%>
           <h3>Food: </h3>
-          <%end%>
-      <%order.foods.each do |food| %>
-        <li><%= food.name%>
-      <%end%>
+          <%end%><ul>
 
-    </li></div><br><br>
+
+      <%order.foods.each do |food| %>
+        <li><%= food.name%></li>
+      <%end%> </ul></div></div>
+
+    <br><br>
 
 
       <% @count += 1 %>
@@ -43,7 +54,7 @@
   <%end%>
 
 
-</ul>
+
 </div>
 
 <%= link_to "Delete",@user, method: :delete %>

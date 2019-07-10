@@ -6,12 +6,15 @@
     <title>RestaurantApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+
+
     <%= link_to "Home", root_path %>
     <% if !session.include? :user_id%>
       <%= link_to "Create New Account", new_user_path %>
@@ -20,5 +23,6 @@
       <%= link_to "Logout", logout_path %>
     <%end%>
     <%= yield %>
+    </header>
   </body>
 </html>
