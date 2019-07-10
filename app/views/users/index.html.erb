@@ -1,5 +1,13 @@
+
+<%= link_to "Current Order", order_path(@order) %>
+
 <h1>Food: </h1>
 <br><br><br>
+
+
+<div class="Foods">
+
+
 <%@foods.each do |food|%>
 <br>
 <%= link_to food.name, food %>
@@ -7,12 +15,15 @@
 
 <%= food.imgurl %><br>
 <%= link_to "Add to Order", add_food_path(food) %>
+</div>
 <br>
 <%end%>
 
 <br><br><br>
 <h1>Drinks: </h1>
 <br><br><br>
+<div class="Drinks">
+
 <%@drinks.each do |drink|%>
 <br>
 <%= link_to drink.name, drink %>
@@ -20,6 +31,7 @@
 
 <%= drink.imgurl %><br>
 <%= link_to "Add to Order", add_drink_path(drink) %>
+</div>
 <br>
 <%end%>
 

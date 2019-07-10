@@ -1,26 +1,51 @@
 class UsersController < ApplicationController
     before_action :set_user, only: [:show, :destroy, :edit, :update]
     before_action :user_params, only: [:create]
-    def index
-        if session.include? :user_id
-            @cur_user = User.find(session[:user_id])
-            @order = @cur_user.orders.find do |order| 
-              order.complete == false
+
+
+      # if session.include? :user_id
+      #       @cur_user = User.find(session[:user_id])
+      #       @order = @cur_user.orders.find do |order|
+      #         order.complete == false
+      #   end
+      #
+      #   if !@order
+      #       @order = Order.create(complete: false)
+      #       if session.include? :user_id
+      #       @cur_user.orders << @order
+      #       end
+      #   end
+
+      def index
+        if !logged_in?
+          redirect_to login_path
+        elsif session.include? :user_id
+          @cur_user = User.find(session[:user_id])
+          @order = @cur_user.orders.find do |order|
+            order.complete == false
           end
         end
-        if !@order
+
+          if !@order
             @order = Order.create(complete: false)
+          end
             if session.include? :user_id
-            @cur_user.orders << @order
+              @cur_user.orders << @order
             end
-        end
+
+
+
         @foods = Food.all
         @drinks = Drink.all
         @users = User.all
     end
+
+
     def new
      @user = User.new
     end
+
+
 
     def create
       @user = User.new(user_params)
@@ -28,6 +53,8 @@ class UsersController < ApplicationController
         redirect_to user_path(@user)
       end
     end
+
+
 
     def show
       if logged_in?
@@ -43,6 +70,9 @@ class UsersController < ApplicationController
       end
     end
 
+
+
+
     def update
       if @user.update(user_params)
         redirect_to @user
@@ -50,10 +80,13 @@ class UsersController < ApplicationController
 
     end
 
+
+
     def destroy
       @user.destroy
       redirect_to users_path
     end
+
 
 
     private
@@ -64,4 +97,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:age, :name, :password, :password_confirmation, :username)
     end
+
+
 end
