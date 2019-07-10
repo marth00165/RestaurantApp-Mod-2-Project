@@ -1,4 +1,4 @@
-<%= link_to "Current Order", order_path(@order) %>
+
 <h1>Food: </h1>
 <br><br><br>
 
@@ -33,13 +33,3 @@
 <br>
 <%end%>
 
-
-
-<h1>DON'T DELETE THIS FOR NOW, ABILITY TO SEE USERBASE</h1>
-
-<h2><%=link_to "login", login_path%></h2> <br>
-
-<%@users.each do |user|%>
-<h4><%= link_to user.name, user%></h4> <br>  <br> <br>
-
-<%end%>

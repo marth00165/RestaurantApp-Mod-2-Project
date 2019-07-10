@@ -20,21 +20,9 @@ class UsersController < ApplicationController
         if !logged_in?
           redirect_to login_path
         elsif session.include? :user_id
-          @cur_user = User.find(session[:user_id])
-          @order = @cur_user.orders.find do |order|
-            order.complete == false
-          end
+          @cur_user = current_user
+          @order = current_order
         end
-
-          if !@order
-            @order = Order.create(complete: false)
-          end
-            if session.include? :user_id
-              @cur_user.orders << @order
-            end
-
-
-
         @foods = Food.all
         @drinks = Drink.all
         @users = User.all
@@ -85,6 +73,21 @@ class UsersController < ApplicationController
     def destroy
       @user.destroy
       redirect_to users_path
+    end
+
+    def analytics
+      @users = User.all
+      @orders = Order.all
+      @orders = @orders.select{|order| order.complete == true}
+      @order = current_order
+      @user = current_user
+      @foods = Food.all
+      @drinks = Drink.all
+      @most_ordered_drink = Order.most_ordered_drink
+      @most_ordered_drink_amount = Order.most_ordered_drink_amount
+      @most_ordered_food = Order.most_ordered_food
+      @most_ordered_food_amount = Order.most_ordered_food_amount
+      @average_meal_cost = Order.average_meal_price
     end
 
 

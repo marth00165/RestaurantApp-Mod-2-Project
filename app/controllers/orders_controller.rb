@@ -5,15 +5,9 @@ class OrdersController < ApplicationController
         end
         @order = Order.find(params[:id])
         if current_user.orders.include? @order
-        @foods = @order.foods
-        @drinks = @order.drinks
-        @total_price = 0.0
-        @foods.each do |food|
-            @total_price += food.price
-        end
-        @drinks.each do |drink|
-            @total_price += drink.price
-        end
+            @foods = @order.foods
+            @drinks = @order.drinks
+            @total_price = @order.total_price
         else
             redirect_to root_path
         end

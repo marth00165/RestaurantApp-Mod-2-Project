@@ -15,6 +15,15 @@ class DrinksController < ApplicationController
         @order.drinks << @drink
         redirect_to @order
     end
+    def remove_drink
+      @drink = Drink.find(params[:id])
+      if logged_in?
+          @cur_user = current_user
+          @order = current_order
+          @order.drinks.delete(@drink)
+          redirect_to order_path(@order)
+      end
+    end
 
 
   private

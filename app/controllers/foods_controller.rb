@@ -6,36 +6,22 @@ class FoodsController < ApplicationController
     end
     def add_food
         @food = Food.find(params[:id])
-        if session.include? :user_id
-            @cur_user = User.find(session[:user_id])
+        if logged_in?
+            @cur_user = current_user
+            @order = current_order
+            @order.foods << @food
+            redirect_to @order
         end
-        @order = @cur_user.orders.find do |order|
-            order.complete == false
-        end
-        if !@order
-            @order = Order.new(complete: false)
-            @cur_user.orders << @order
-        end
-        @order.foods << @food
-        redirect_to @order
     end
 
     def remove_food
       @food = Food.find(params[:id])
-      if session.include? :user_id
-          @cur_user = User.find(session[:user_id])
+      if logged_in?
+          @cur_user = current_user
+          @order = current_order
+          @order.foods.delete(@food)
+          redirect_to order_path(@order)
       end
-      @order = @cur_user.orders.find do |order|
-          order.complete == false
-      end
-      if !@order
-          @order = Order.new(complete: false)
-          @cur_user.orders << @order
-      end
-      a = @order.foods
-      a.delete_at(a.index(@food))
-      redirect_to @order
-
     end
 
     private
