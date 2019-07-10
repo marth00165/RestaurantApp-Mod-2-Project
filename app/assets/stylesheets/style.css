@@ -1,0 +1,59 @@
+body {
+
+  background: black;
+  color: yellow;
+}
+
+.jawn{
+
+  background: #009900;
+  color: white;
+}
+.content{
+  display:grid;
+  background: #009900;
+  color: white;
+}
+
+
+.order {
+background: grey;
+display:grid;
+grid-template-columns: repeat(2,1fr);
+text-align: center;
+
+}
+
+.order h2{
+
+  color: purple;
+  grid-column: 1/3;
+  text-align: center;
+}
+
+
+
+.drinks {
+
+  grid-columns: 2/3;
+
+
+}
+
+.food {
+
+  grid-column: 1/2;
+
+}
+
+.order ul li {
+
+  list-style: none;
+}
+
+
+header {
+  background: white;
+
+
+}
