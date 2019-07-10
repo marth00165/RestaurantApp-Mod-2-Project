@@ -17,7 +17,6 @@
     <%else%>
       <%= link_to "Logout", logout_path%>
       <%= link_to "#{current_user.name} Profile", current_user%>
-
     <%end%>
     <%= yield %>
   </body>

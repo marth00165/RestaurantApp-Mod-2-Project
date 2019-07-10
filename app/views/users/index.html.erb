@@ -11,7 +11,7 @@
 <%= link_to food.name, food %>
 <p><%='%.2f' % food.price.to_d %> each </p>
 
-<%= food.imgurl %><br>
+<%=image_tag(url_for(food.imgurl))%><br>
 <%= link_to "Add to Order", add_food_path(food) %>
 </div>
 <br>
@@ -27,7 +27,7 @@
 <%= link_to drink.name, drink %>
 <p><%='%.2f' %  drink.price.to_d %> each </p>
 
-<%= drink.imgurl %><br>
+<%=image_tag(url_for(drink.imgurl))%><br>
 <%= link_to "Add to Order", add_drink_path(drink) %>
 </div>
 <br>
