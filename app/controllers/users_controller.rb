@@ -30,10 +30,14 @@ class UsersController < ApplicationController
     end
 
     def show
-      if current_user.id == params[:id].to_i
-        @count = 1
-        @orders = @user.orders
-        @orders = @orders.select{|order| order.complete}
+      if logged_in?
+        if current_user.id == params[:id].to_i
+          @count = 1
+          @orders = @user.orders
+          @orders = @orders.select{|order| order.complete}
+        else
+          redirect_to root_path
+        end
       else
         redirect_to root_path
       end
