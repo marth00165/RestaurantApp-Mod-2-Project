@@ -1,16 +1,42 @@
-<p>This is current order</p>
+
+<%= stylesheet_link_tag "style.css" %>
+<main id="order">
+
+
+<h1 id="OrderHeader">Current Order</h1>
+
+<body>
+
+
+<div id="drinks">
 <h3>Drinks: </h3><br>
 <%@drinks.each do |drink|%>
-<%=link_to drink.name, drink%>
+<li><%=link_to drink.name, drink%>
 <%= '%.2f' % drink.price.to_d%><br>
+</li>
 <%end%>
+</div>
+
+
+<div id="foods">
 <h3>Food: </h3><br>
 <%@foods.each do |food|%>
+<li>
 <%=link_to food.name, food%>
 <%= '%.2f' % food.price.to_d%><br>
+</li>
 <%end%>
+</div>
+
+
+</body>
+
+
+<div class="price">
 <h3>Total Price: </h3>
 <%= '%.2f' % @total_price.to_d%>
+</div>
 <br>
-<%= link_to "Checkout", checkout_path%>
 
+<h2 id="checkout"><%= link_to "Checkout", checkout_path%></h2>
+</main>
