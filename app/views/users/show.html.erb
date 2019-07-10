@@ -1,9 +1,22 @@
-<h1>Welcome <%=@user.name%> !</h1>
-<h2>Age: <%=@user.age%></h2>
+
+<header>
+  <h1>Welcome <%=@user.name%> !</h1>
+  <h2>Age: <%=@user.age%></h2>
+
+</header>
+
+<body>
+<div class="content">
+
 
 <ul>
+
+
   <%if @orders.length > 0%>
     <%@orders.each do |order|%>
+    <div class="order">
+
+
     <h2>Order #<%= @count %></h2>
       <%if order.drinks.length > 0%>
       <h3>Drinks: </h3>
@@ -16,16 +29,23 @@
           <%end%>
       <%order.foods.each do |food| %>
         <li><%= food.name%>
-      <%end%></li>
+      <%end%>
+
+    </li></div><br><br>
 
 
       <% @count += 1 %>
 
     <%end%>
+
   <%else%>
     <h3>No Past Orders On Record</h3>
   <%end%>
 
+
 </ul>
+</div>
+
 <%= link_to "Delete",@user, method: :delete %>
 <%= link_to "Edit User", edit_user_path(@user) %>
+</body>

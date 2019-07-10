@@ -1,0 +1,29 @@
+body {
+
+  background: black;
+  color: yellow;
+}
+
+header{
+
+  background: #009900;
+  color: white;
+}
+.content{
+  display:grid;
+
+
+
+
+  background: #009900;
+  color: white;
+}
+.content h2 {
+  color: orange;
+
+}
+
+#content ul{
+display:grid;
+grid-template-columns: repeat(2,1fr);
+}

@@ -2,20 +2,6 @@ class UsersController < ApplicationController
     before_action :set_user, only: [:show, :destroy, :edit, :update]
     before_action :user_params, only: [:create]
 
-
-      # if session.include? :user_id
-      #       @cur_user = User.find(session[:user_id])
-      #       @order = @cur_user.orders.find do |order|
-      #         order.complete == false
-      #   end
-      #
-      #   if !@order
-      #       @order = Order.create(complete: false)
-      #       if session.include? :user_id
-      #       @cur_user.orders << @order
-      #       end
-      #   end
-
       def index
         if !logged_in?
           redirect_to login_path
