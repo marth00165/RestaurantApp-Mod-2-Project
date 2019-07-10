@@ -1,0 +1,7 @@
+<br>
+<div>Most Ordered Drink: <%=link_to @most_ordered_drink.name, @most_ordered_drink%> <br>
+    Total Amount Ordered: <%=@most_ordered_drink_amount%></div>
+    <br>
+    <div>Most Ordered Meal: <%=link_to @most_ordered_food.name, @most_ordered_food%> <br>
+        Total Amount Ordered: <%=@most_ordered_food_amount%></div><br>
+        <div>Average Meal Cost: <%='%.2f' % @average_meal_cost%></div>

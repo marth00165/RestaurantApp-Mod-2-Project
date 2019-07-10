@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   get "/drinks/:id/add", to: "drinks#add_drink", as: "add_drink"
   get "/orders/:id/checkout", to: "orders#checkout", as: "checkout"
   get "/foods/:id/remove", to: "foods#remove_food", as: "remove_food"
+  get "/drinks/:id/remove", to: "drinks#remove_drink", as: "remove_drink"
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+  get '/analytics', to: 'users#analytics', as: "analytics"
   resources :cards
   resources :users
 

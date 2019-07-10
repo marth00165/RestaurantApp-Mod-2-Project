@@ -15,5 +15,7 @@ Price Per Food: <%=@food.price%>
 
 
 <%= link_to "Home", root_path %>
+<% if current_order.foods.include? @food%>
 <%= link_to "remove from order", remove_food_path(@food) %>
+<%end%>
 <%= link_to "add to order", add_food_path(@food) %>
