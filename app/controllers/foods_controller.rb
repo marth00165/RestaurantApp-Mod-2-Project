@@ -1,21 +1,19 @@
 class FoodsController < ApplicationController
-  before_action :set_food, only: [:show]
+  before_action :set_food, only: [:show, :add_food, :remove_food]
 
     def index
 
     end
     def add_food
-        @food = Food.find(params[:id])
         if logged_in?
             @cur_user = current_user
             @order = current_order
             @order.foods << @food
-            redirect_to @order
+            redirect_to users_path
         end
     end
 
     def remove_food
-      @food = Food.find(params[:id])
       if logged_in?
           @cur_user = current_user
           @order = current_order

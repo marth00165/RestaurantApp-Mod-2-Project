@@ -12,7 +12,17 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
-
+  def current_order_exists?
+    if logged_in?#checks for user logged in?
+      @is_order = false
+      current_user.orders.each do |order|
+        if order.complete == false
+          @is_order = true #finds current order
+        end
+      end
+      return @is_order
+    end
+  end
   def current_order
     if logged_in?#checks for user logged in?
       current_user.orders.each do |order|

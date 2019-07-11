@@ -1,6 +1,11 @@
 <%= stylesheet_link_tag "usershow.css" %>
 <h1>Welcome <%=@user.name%> !</h1>
-<h2>Age: <%=@user.age%></h2>
+<%if current_order_exists?%>
+<h4><%=link_to "Return to Menu for Current Order", users_path%></h4>
+<%else%>
+<h4><%=link_to "Create a New Order", users_path%></h4>
+<%end%>
+
 
 <ul>
   <%if @orders.length > 0%>

@@ -24,4 +24,14 @@ class OrdersController < ApplicationController
         end
 
     end
+    def clear_cart 
+        @order = Order.find(params[:id])
+        while !@order.drinks.all.empty? 
+            @order.drinks.clear
+        end
+        while !@order.foods.all.empty? 
+            @order.foods.clear
+        end
+        redirect_to order_path(@order)
+    end
 end

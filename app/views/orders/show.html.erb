@@ -53,9 +53,6 @@
           </div>
 
         </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
         <h4 id="checkout"><%=link_to "CHECKOUT", checkout_path %></h4>
 
       </form>
@@ -84,6 +81,8 @@
         </li>
         <%end%>
       </div>
+      <div><%=link_to "Add More to Order", users_path%></div>
+      <div><%=link_to "Clear Cart", clear_cart_path%></div>
 
 
       <hr>
