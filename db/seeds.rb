@@ -14,8 +14,8 @@ DrinkOrder.destroy_all
 FoodOrder.destroy_all
 Card.destroy_all
 
-User.create(name: "Rohit Pratti", username: "Marth00165", password: "abc", password_confirmation: "abc", age: 23)
-User.create(name: "Philip Sterling", username: "Zanith", password: "abc", password_confirmation: "abc", age: 24)
+User.create(name: "Rohit Pratti", username: "Marth00165", password: "abc", password_confirmation: "abc", age: 23, email: "philipssterlings@gmail.com", address: "15516 70th Ave NE", city: "Kenmore", state: "WA", zip: 98028)
+User.create(name: "Philip Sterling", username: "Zanith", password: "abc", password_confirmation: "abc", age: 24, email: "rohit.pratti@gmail.com", address: "1711 Arlington St", city: "Philadelphia", state: "PA", zip: 19121)
 
 foods =
  [{name:"Green Curry",price:13.95,imgurl:"pictures/1.webp",desc:"Green curry paste with bamboo shoots, bell peppers, basil, eggplant and coconut milk. Sweeter than red curry. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
@@ -51,25 +51,6 @@ drinks = [
 drinks.each do |drink|
   Drink.create(drink)
 end
-
-3.times do
-    Card.create(
-      card_no: rand(1e15...1e16).to_i.to_s,
-      sec_code: rand(100...999).to_i,
-      pin: rand(1000...9999).to_i,
-      user_id: User.first.id
-    )
-end
-
-3.times do
-    Card.create(
-      card_no: rand(1e15...1e16).to_i.to_s,
-      sec_code: rand(100...999).to_i,
-      pin: rand(1000...9999).to_i,
-      user_id: User.last.id
-    )
-end
-
 
 
 8.times do

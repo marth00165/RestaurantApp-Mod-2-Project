@@ -93,7 +93,15 @@ class UsersController < ApplicationController
       @most_ordered_food = Order.most_ordered_food
       @most_ordered_food_amount = Order.most_ordered_food_amount
       @average_meal_cost = Order.average_meal_price
-      @fav_meal = current_user.fav_meal
+      @fav_meal = current_user.fav_order
+      @fav_foods = []
+      @fav_drinks = []
+      @fav_meal.foods.each do |food|
+        @fav_foods << food
+      end
+      @fav_meal.drinks.each do |drink|
+        @fav_drinks << drink
+      end
     end
 
 
@@ -106,6 +114,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:age, :name, :password, :password_confirmation, :username)
     end
-
 
 end
