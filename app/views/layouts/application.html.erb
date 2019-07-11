@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <div class="navbar">
     <%= link_to "Home", root_path %>
     <% if !logged_in?%>
       <%= link_to "Create New Account", new_user_path %>
@@ -19,6 +19,7 @@
       <%= link_to "#{current_user.name} Profile", current_user%>
       <%= link_to "Current Order", order_path(current_order) %>
     <%end%>
+    </div>
     <%= yield %>
-  </body>
+
 </html>
