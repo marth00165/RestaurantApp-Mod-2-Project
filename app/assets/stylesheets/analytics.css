@@ -2,6 +2,14 @@
   background-image: url(https://m.media-amazon.com/images/I/81lqrumqYSL._SS500_.jpg);
 }
 
+.analyticsbody a:hover {
+  border-color: gold;
+  background: black;
+  color: cyan;
+
+
+}
+
 .modcard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
@@ -15,6 +23,7 @@
 }
 .modcard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-color: gold;
 }
 
 .modcard a {
@@ -32,6 +41,7 @@
 
 .modcard a:hover {
   color: gold;
+
 }
 
 .modcard a:active {
