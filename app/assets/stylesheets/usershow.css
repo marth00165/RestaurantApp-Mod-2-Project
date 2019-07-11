@@ -1,0 +1,38 @@
+.usershowpage {
+    background-image: url(https://labotteitalianrestaurant.com/wp-content/uploads/2015/11/background.jpg);
+
+}
+.usershowpage h2{
+  color: #9883E5;
+}
+.usershowpage h3 {
+  color: #9883E5;
+}
+
+.profilecard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: orange;
+  color: #9883E5;
+  border-style: solid;
+  border-color: white;
+
+}
+
+.profilecard a {
+  display: block;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: black;
+
+}
+
+.profilecard a:hover {
+  background: #85C7F2;
+  color: black;
+}

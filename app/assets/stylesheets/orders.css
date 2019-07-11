@@ -98,8 +98,8 @@ label {
 }
 
 .checkoutform a:hover {
-  background: #85C7F2;
-  color: black;
+  background: none;
+  color: #50C9CE;
 }
 
 #checkout a {

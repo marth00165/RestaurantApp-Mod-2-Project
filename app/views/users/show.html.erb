@@ -1,4 +1,9 @@
+
 <%= stylesheet_link_tag "usershow.css" %>
+
+<body class="usershowpage">
+
+
 <h1>Welcome <%=@user.name%> !</h1>
 <%if current_order_exists?%>
 <h4><%=link_to "Return to Menu for Current Order", users_path%></h4>
@@ -7,9 +12,17 @@
 <%end%>
 
 
+
 <ul>
+
+
   <%if @orders.length > 0%>
+
     <%@orders.each do |order|%>
+
+<div class="profilecard">
+
+
     <h2>Order #<%= @count %></h2>
       <%if order.drinks.length > 0%>
       <h3>Drinks: </h3>
@@ -26,12 +39,24 @@
 
 
       <% @count += 1 %>
-
+      </div>
     <%end%>
+
   <%else%>
-    <h3>No Past Orders On Record</h3>
+
+
+  <div class="profilecard">
+
+
+    <h2>No Past Orders On Record</h2>
+</div>
+
   <%end%>
 
+
 </ul>
+
+
 <%= link_to "Delete",@user, method: :delete %>
 <%= link_to "Edit User", edit_user_path(@user) %>
+</body>
