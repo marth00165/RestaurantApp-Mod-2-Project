@@ -1,5 +1,5 @@
 
-<%= stylesheet_link_tag "style.css" %>
+<%= stylesheet_link_tag "orders.css" %>
 <body class="checkoutform">
 
 <h2>Checkout Form</h2>
@@ -70,7 +70,7 @@
   </div>
   <div class="col-25">
     <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><%= @drinks.length + @foods.length %></b></span></h4>
 
       <div id="drinks">
         <h3>Drinks: </h3><br>
@@ -93,7 +93,7 @@
 
 
       <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      <p>Total <span class="price" style="color:black"><b><%= '%.2f' % @total_price %></b></span></p>
     </div>
   </div>
 </div>

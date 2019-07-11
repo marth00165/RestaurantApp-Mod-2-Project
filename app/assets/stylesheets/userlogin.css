@@ -1,0 +1,131 @@
+
+/*----------css login page---------------*/
+
+.NewLogin{
+  background-image: url(https://video-images.vice.com/articles/5ba254fc8bcb7b00076e3d6d/lede/1537365906089-Thai-Food-London-3.jpeg);
+
+}
+
+.createbody{
+background-image: url(https://video-images.vice.com/articles/5ba254fc8bcb7b00076e3d6d/lede/1537365906089-Thai-Food-London-3.jpeg);
+
+}
+
+.loginform form {
+  text-align: left;
+
+  border:3px solid #FCAA67;
+  display: inline-block;
+  max-width: 600px;
+  min-width: 320px;
+  width: 100%;
+  background: black;
+
+
+}
+.createform form {
+  text-align: left;
+
+  border:3px solid #FCAA67;
+  display: inline-block;
+  max-width: 600px;
+  min-width: 320px;
+  width: 100%;
+  background: black;
+
+
+}
+
+
+
+
+.loginform input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #85C7F2;
+  box-sizing: border-box;
+  background: #85C7F2;
+  color: #08415C;
+}
+
+.createform input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #85C7F2;
+  box-sizing: border-box;
+  background: #85C7F2;
+  color: #08415C;
+}
+
+
+button {
+  background-color: #119DA4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.loginheader {
+  text-align: center;
+  color: white;
+  background: #85C7F2;
+
+}
+.createpage {
+  text-align: center;
+  color: White;
+  background: #85C7F2;
+  
+}
+
+.new_user {
+  color: white;
+  background: black;
+  margin: 80px;
+
+}
+
+.new_user button{
+  background: #85C7F2;
+
+}
+
+.loginform  {
+color: white;
+margin: 40px;
+
+
+}
+
+.loginform button {
+  background: #85C7F2;
+
+}
+
+.loginform a {
+
+  float: left;
+  display: block;
+  color: #red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: orange;
+}
+
+.loginform a:hover {
+  background: #85C7F2;
+  color: black;
+
+}
