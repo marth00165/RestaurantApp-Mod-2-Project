@@ -1,35 +1,38 @@
+<body class="mainpage">
 
-<h1>Food: </h1>
-<br><br><br>
+<h1 id = "foodheader">Food: </h1>
 
-
-<div class="Foods">
-
-
+<br><br>
+<div class="foods">
 <%@foods.each do |food|%>
 <br>
+
 <%= link_to food.name, food %>
 <p><%='%.2f' % food.price.to_d %> each </p>
 
+
 <%=image_tag(url_for(food.imgurl))%><br>
 <%= link_to "Add to Order", add_food_path(food) %>
-</div>
+
 <br>
 <%end%>
+</div>
+<br><br>
+
+<h1 id = "drinkheader">Drinks: </h1>
 
 <br><br><br>
-<h1>Drinks: </h1>
-<br><br><br>
-<div class="Drinks">
-
+<div class="drinks">
 <%@drinks.each do |drink|%>
 <br>
+
 <%= link_to drink.name, drink %>
 <p><%='%.2f' %  drink.price.to_d %> each </p>
 
 <%=image_tag(url_for(drink.imgurl))%><br>
 <%= link_to "Add to Order", add_drink_path(drink) %>
-</div>
+
 <br>
 <%end%>
-
+</div>
+</body>

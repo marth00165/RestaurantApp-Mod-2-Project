@@ -20,7 +20,7 @@ User.create(name: "Philip Sterling", username: "Zanith", password: "abc", passwo
 foods =
  [{name:"Green Curry",price:13.95,imgurl:"pictures/1.webp",desc:"Green curry paste with bamboo shoots, bell peppers, basil, eggplant and coconut milk. Sweeter than red curry. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
   {name:"Red Curry",price:13.95,imgurl:"pictures/2.webp",desc:"Red curry with bamboo shoots, bell peppers, basil and coconut milk. Does not come with rice. If you would like rice, it will be side order please. Gluten free."},
-  {name:"Pahd Thai",price:12.95,imgurl:"pictures/3.webp",desc:"Stir fried rice noodles with egg, ground peanuts, fresh bean sprouts, green onions and carrot. Gluten free."},
+  {name:"Pad Thai",price:12.95,imgurl:"pictures/3.webp",desc:"Stir fried rice noodles with egg, ground peanuts, fresh bean sprouts, green onions and carrot. Gluten free."},
   {name:"Chicken Noodles",price:12.95,imgurl:"pictures/4.webp",desc:"Stir fried wide rice noodles with chicken, egg, tomatoes, pineapples and carrots."},
   {name:"Stir Fried Beef Salad",price:13.75,imgurl:"pictures/6.jpg",desc:"Stir fried beef with lettuce, onions, cucumbers, tomatoes and lime juice."},
   {name:"Tom Yum Soup",price:11.50,imgurl:"pictures/7.webp",desc:"Hot and sour soup with mushrooms, lemongrass, lime leaves and chili paste. Gluten free."},

@@ -5,6 +5,14 @@ text-align: left;
 
 }
 
+img {
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
 *{
 
   background: #313638;
@@ -17,28 +25,28 @@ text-align: left;
 }
 
 
-#order a {
+* a {
 
   text-decoration: none
 
 }
 
- #order a:link {
+ * a:link {
   color: #EEF0F2;
 }
 
 /* visited link */
-#order a:visited {
+* a:visited {
   color: #EEF0F2;
 }
 
 /* mouse over link */
-#order a:hover {
+* a:hover {
   color: #119DA4;
 }
 
 /* selected link */
-#order a:active {
+* a:active {
   color: #6564DB;
 
 }
@@ -116,4 +124,28 @@ body li:hover{
   grid-row: 3;
   grid-column: 2;
   text-align: center;
+}
+
+/*------ Css for Index ------*/
+.mainpage {
+    display:grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+
+}
+.foods {
+  grid-column: 3/9;
+  grid-row: 2;
+}
+.drinks {
+  grid-column: 6/9;
+  grid-row: 2;
+}
+#drinkheader {
+  grid-column: 6/9;
+  grid-row: 1;
+}
+#foodheader {
+  grid-column: 3/9;
+  grid-row: 1;
 }
