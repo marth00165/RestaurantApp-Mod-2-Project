@@ -102,16 +102,7 @@ label {
   color: black;
 }
 
-a {
-  display: none;
-  color: none;
-  text-align: left;
-  padding: none;
-  text-decoration: none;
-  background: none;
-  margin: auto;
 
-}
 
 hr {
   border: 1px solid lightgrey;
