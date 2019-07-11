@@ -38,14 +38,14 @@ end
 drinks = [
   {name:"Coke",price:1.50,imgurl:"pictures/drink1.webp",desc:"Can of Coke soda"},
   {name:"Long Island",price:12.00,imgurl:"pictures/drink2.jpg",desc:"Long Island Iced Tea"},
-  {name:"Water",price:1.00,imgurl:"pictures/drink3.jpg",desc:"Quench yo thirst boul"},
+  {name:"Water",price:1.00,imgurl:"pictures/drink3.jpg",desc:"Refreshing H2O"},
   {name:"Daiquiri",price:15.00,imgurl:"pictures/drink4.jpeg",desc:"Cocktail with cranberry juice"},
   {name:"Orange Juice",price:5.00,imgurl:"pictures/drink5.jpg",desc:"Freshly Squeezed Orange Juice"},
   {name:"Cranberry Juice",price:5.00,imgurl:"pictures/drink6.jpg",desc:"Cranberry Juice with Ice"},
   {name:"Ro-Special",price:6.90,imgurl:"pictures/drink7.jpg",desc:"Classic Trash Can with a Rohitwist"},
   {name:"Philip-Drank",price:4.20,imgurl:"pictures/drink8.jpg",desc:"Some Apple Juice"},
   {name:"Boba Tea",price:5.00,imgurl:"pictures/drink9.jpg",desc:"Boba Teas So YUMMY!"},
-  {name:"Dank",price:420.00,imgurl:"pictures/drink10.jpg",desc:"DANK ASS DRINK"}
+  {name:"Dank",price:420.00,imgurl:"pictures/drink10.jpg",desc:"DANK DRINK"}
 ]
 
 drinks.each do |drink|
