@@ -1,0 +1,52 @@
+.analyticsbody {
+  background-image: url(https://m.media-amazon.com/images/I/81lqrumqYSL._SS500_.jpg);
+}
+
+.modcard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: white;
+  color: #9883E5;
+  border-style: solid;
+  border-color: #119DA4;
+}
+.modcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.modcard a {
+  text-decoration: none;
+
+}
+
+.modcard a:link {
+  color: #9883E5;
+}
+
+.modcard a:visited {
+  color:#9883E5;
+}
+
+.modcard a:hover {
+  color: gold;
+}
+
+.modcard a:active {
+  color: #9883E5;
+}
+
+.analyticsHead {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+  width: fit-content;
+
+}
+
+.analyticsHead:hover {
+  background-image: url(https://www.desktopbackground.org/download/1440x900/2012/12/12/497910_meme-backgrounds-pictures-wallpapers-cave_1440x900_h.jpg);
+}

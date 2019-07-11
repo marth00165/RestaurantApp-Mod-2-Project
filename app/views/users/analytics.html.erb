@@ -1,17 +1,26 @@
-<br>
-<div>Most Ordered Drink: <%=link_to @most_ordered_drink.name, @most_ordered_drink%> <br>
+<%= stylesheet_link_tag "analytics.css" %>
+<body class="analyticsbody">
+
+  <div class="jawn">
+
+  <h1 class="analyticsHead">Analytics</h1></div>
+
+
+<div class="modcard">Most Ordered Drink: <%=link_to @most_ordered_drink.name, @most_ordered_drink%> <br>
     Total Amount Ordered: <%=@most_ordered_drink_amount%></div>
     <br>
-    <div>Most Ordered Meal: <%=link_to @most_ordered_food.name, @most_ordered_food%> <br>
+    <div class="modcard">Most Ordered Meal: <%=link_to @most_ordered_food.name, @most_ordered_food%> <br>
         Total Amount Ordered: <%=@most_ordered_food_amount%></div><br>
-        <div>Average Meal Cost: <%='%.2f' % @average_meal_cost%></div><br>
-        <div><%=current_user.name%>'s Favorite Meal: <br>
-            Foods: 
+        <div class="modcard">Average Meal Cost: <%='%.2f' % @average_meal_cost%></div><br>
+        <div class="modcard"><%=current_user.name%>'s Favorite Meal: <br>
+            Foods:
             <%@fav_foods.each do |food|%>
             <%=food.name%>
             <%end%>
-            <br>Drinks: 
+            <br>Drinks:
             <%@fav_drinks.each do |drink|%>
             <%=drink.name%>
             <%end%>
         </div>
+
+        </body>

@@ -44,17 +44,19 @@
 .foods{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
 }
 
 .drinks {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
 @media screen and (max-width: 600px) {
-  .column {
+  .menucard {
     width: 100%;
     display: block;
     margin-bottom: 20px;
