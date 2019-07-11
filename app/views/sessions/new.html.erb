@@ -1,22 +1,30 @@
+<%= stylesheet_link_tag "userlogin.css" %>
+
+<body class="NewLogin">
 <% provide(:title, "Log in") %>
-<h1>Log in</h1>
+
+
+
+<h2 class="loginheader">Log in</h2>
 <% if flash[:danger]%>
 <%= flash[:danger]%>
 <%end%>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+
+<div align= "center" class="loginform">
     <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'form-control' %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      Username: <%= f.text_field :username, class: 'form-control' %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+
+      Password:<%= f.password_field :password, class: 'form-control' %>
+
+      <button type="submit" name="button"><%= "Log in" %></button>
+
+
+      <p>  <%= link_to "New User? Sign up now!", new_user_path %></p>
     <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
-
   </div>
 
-</div>
+
+
+  </body>
