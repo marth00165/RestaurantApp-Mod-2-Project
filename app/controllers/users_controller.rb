@@ -38,7 +38,11 @@ class UsersController < ApplicationController
     def create
       @user = User.new(user_params)
       if @user.save
+        log_in @user
         redirect_to user_path(@user)
+      else
+         @errors = @user.errors[:messages]
+        render :new
       end
     end
 
@@ -50,6 +54,7 @@ class UsersController < ApplicationController
           @count = 1
           @orders = @user.orders
           @orders = @orders.select{|order| order.complete}
+          @orders = @orders.sort.reverse
         else
           redirect_to root_path
         end
@@ -88,6 +93,7 @@ class UsersController < ApplicationController
       @most_ordered_food = Order.most_ordered_food
       @most_ordered_food_amount = Order.most_ordered_food_amount
       @average_meal_cost = Order.average_meal_price
+      @fav_meal = current_user.fav_meal
     end
 
 
