@@ -1,0 +1,19 @@
+.mainpage a:link {
+  color: orange;
+  text-decoration: none;
+}
+
+/* visited link */
+.mainpage a:visited {
+  color: orange;
+}
+
+/* mouse over link */
+.mainpage a:hover {
+  color: white;
+}
+
+/* selected link */
+.mainpage a:active {
+  color: black;
+}
