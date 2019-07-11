@@ -1,21 +1,26 @@
-<h1><%=@food.name%></h1> <br><br>
+<%= stylesheet_link_tag "drinkshow.css" %>
+
+<body class="drinkshow">
+
+
+
+<div class="card">
+
+<h1><%=@food.name%></h1>
 <%=image_tag(url_for(@food.imgurl))%>
 
-Description: <%= @food.desc %><br><br>
+<p><%= @food.desc %></p>
+
+<p class="price"></p>Price Per Food: <%=@food.price%>
 
 
 
 
 
 
-Price Per Food: <%=@food.price%>
-
-
-
-
-
-<%= link_to "Home", root_path %>
 <% if current_order.foods.include? @food%>
 <%= link_to "remove from order", remove_food_path(@food) %>
 <%end%>
 <%= link_to "add to order", add_food_path(@food) %>
+</div>
+</body>

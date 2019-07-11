@@ -1,6 +1,4 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
   font-family: Arial;
   font-size: 17px;
@@ -88,12 +86,31 @@ label {
   font-size: 17px;
 }
 
-.btn:hover {
-  background-color: #45a049;
+
+.checkoutform a {
+  display: block;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: #85C7F2;
+  margin: auto;
+}
+
+.checkoutform a:hover {
+  background: #85C7F2;
+  color: black;
 }
 
 a {
-  color: #2196F3;
+  display: none;
+  color: none;
+  text-align: left;
+  padding: none;
+  text-decoration: none;
+  background: none;
+  margin: auto;
+
 }
 
 hr {
