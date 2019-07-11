@@ -1,3 +1,9 @@
+.mainpage {
+
+
+  background-image: url(http://lerevecafe.com/graphics/global/background.jpg);
+}
+
 .mainpage a:link {
   color: orange;
   text-decoration: none;
@@ -16,4 +22,43 @@
 /* selected link */
 .mainpage a:active {
   color: black;
+}
+
+.menucard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: grey;
+
+}
+
+.price {
+  color: white;
+  font-size: 22px;
+}
+
+.foodcolumn {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.foodrow {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.foodrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .foodcolumn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }

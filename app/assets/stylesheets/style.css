@@ -5,6 +5,7 @@
   font-family: Impact, Charcoal, sans-serif;
   list-style: none;
 
+
 }
 
 
@@ -20,6 +21,7 @@
   top: 0; /* Position the navbar at the top of the page */
   width: 100%;
   color: white;/* Full width */
+
 }
 
 /* Links inside the navbar */
@@ -31,6 +33,9 @@
   padding: 14px 16px;
   text-decoration: none;
   background: #85C7F2;
+  border-style: solid;
+  border-color: white;
+
 }
 
 /* Change background on mouse-over */
@@ -56,7 +61,7 @@ img {
 }
 
 img:hover {
-transform: scale(1.5, 1.5);
+transform: scale(1.25, 1.25);
 
 }
 
