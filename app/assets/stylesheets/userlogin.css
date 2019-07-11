@@ -8,7 +8,6 @@
 
 .createbody{
 background-image: url(https://video-images.vice.com/articles/5ba254fc8bcb7b00076e3d6d/lede/1537365906089-Thai-Food-London-3.jpeg);
-
 }
 
 .loginform form {
@@ -80,13 +79,23 @@ button:hover {
   text-align: center;
   color: white;
   background: #85C7F2;
+  width: fit-content;
 
 }
 .createpage {
+
   text-align: center;
   color: White;
   background: #85C7F2;
-  
+  width: fit-content;
+
+
+}
+
+.jawn {
+
+  display: flex;
+  justify-content: center;
 }
 
 .new_user {

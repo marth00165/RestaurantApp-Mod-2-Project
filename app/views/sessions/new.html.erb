@@ -4,11 +4,14 @@
 <% provide(:title, "Log in") %>
 
 
+<div class="jawn">
+
 
 <h2 class="loginheader">Log in</h2>
 <% if flash[:danger]%>
 <%= flash[:danger]%>
 <%end%>
+</div>
 
 <div align= "center" class="loginform">
     <%= form_for(:session, url: login_path) do |f| %>

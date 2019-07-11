@@ -1,3 +1,9 @@
+.mainpage {
+
+
+  background-image: url(http://lerevecafe.com/graphics/global/background.jpg);
+}
+
 .mainpage a:link {
   color: orange;
   text-decoration: none;
@@ -16,4 +22,32 @@
 /* selected link */
 .mainpage a:active {
   color: black;
+}
+
+.menucard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  max-height: auto;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background: grey;
+
+}
+
+
+.price {
+  color: white;
+  font-size: 22px;
+}
+
+.foods{
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.drinks {
+  display: flex;
+  justify-content: space-around;
 }
