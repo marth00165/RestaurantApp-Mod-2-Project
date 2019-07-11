@@ -27,6 +27,7 @@
 .menucard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
+  max-height: auto;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -34,31 +35,19 @@
 
 }
 
+
 .price {
   color: white;
   font-size: 22px;
 }
 
-.foodcolumn {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+.foods{
+  display: flex;
+  justify-content: space-around;
+
 }
 
-/* Remove extra left and right margins, due to padding in columns */
-.foodrow {margin: 0 -5px;}
-
-/* Clear floats after the columns */
-.foodrow:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .foodcolumn {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
+.drinks {
+  display: flex;
+  justify-content: space-around;
 }
