@@ -1,6 +1,6 @@
 # README
 
-TODO:
+Install TODO:
 
 * Ruby version 2.6.3
 
@@ -12,4 +12,4 @@ TODO:
 
 * Legal stuffs:
 
-* Licensed under MIT License (https://github.com/PhilipSterling/RestaurantApp-Mod-2-Project/master/LICENSE.md)
+* License - https://github.com/PhilipSterling/RestaurantApp-Mod-2-Project/blob/master/LICENSE.md
