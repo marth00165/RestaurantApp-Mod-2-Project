@@ -12,4 +12,4 @@ TODO:
 
 * Legal stuffs:
 
-* 
+* Licensed under MIT License (https://github.com/PhilipSterling/RestaurantApp-Mod-2-Project/master/LICENSE.md)
