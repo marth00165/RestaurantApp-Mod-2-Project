@@ -22,6 +22,8 @@ background-image: url(https://video-images.vice.com/articles/5ba254fc8bcb7b00076
 
 
 }
+
+
 .createform form {
   text-align: left;
 
@@ -164,5 +166,11 @@ margin: 40px;
 .loginform a:hover {
   background: #85C7F2;
   color: black;
+
+}
+.flash {
+  display: flex;
+  justify-content: center;
+  color: white;
 
 }
