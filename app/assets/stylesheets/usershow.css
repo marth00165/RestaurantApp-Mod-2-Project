@@ -36,3 +36,9 @@
   background: #85C7F2;
   color: black;
 }
+
+.profilecard:hover {
+  border-color: violet;
+  transform: scale(1.25, 1.25);
+
+}
