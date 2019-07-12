@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
         end
     end
     def checkout
+
         @order = Order.find(params[:id])
         if !@order.drinks.all.empty? || !@order.foods.all.empty?
             @order.complete = true
@@ -24,14 +25,20 @@ class OrdersController < ApplicationController
         end
 
     end
-    def clear_cart 
+
+    def cardform
+      render :creditcardform
+    end
+    
+    def clear_cart
         @order = Order.find(params[:id])
-        while !@order.drinks.all.empty? 
+        while !@order.drinks.all.empty?
             @order.drinks.clear
         end
-        while !@order.foods.all.empty? 
+        while !@order.foods.all.empty?
             @order.foods.clear
         end
         redirect_to order_path(@order)
     end
+
 end

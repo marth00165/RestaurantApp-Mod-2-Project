@@ -1,70 +1,18 @@
 
 <%= stylesheet_link_tag "orders.css" %>
-<body class="checkoutform">
 
-<h2>Checkout Form</h2>
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="/action_page.php">
 
-        <div class="row">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
+<body id="cartform">
 
-            <div class="row">
-              <div class="col-50">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" placeholder="NY">
-              </div>
-              <div class="col-50">
-                <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
-              </div>
-            </div>
-          </div>
+<div class="jawn">
 
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="row">
-              <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
-              </div>
-              <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <h4 id="checkout"><%=link_to "CHECKOUT", checkout_path %></h4>
-
-      </form>
-    </div>
-  </div>
 
   <div class="col-25">
     <div class="container">
       <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b><%= @drinks.length + @foods.length %></b></span></h4>
 
       <div id="drinks">
-        <h3>Drinks: </h3><br>
+        <h3>Drinks: </h3>
         <%@drinks.each do |drink|%>
         <li><%=link_to drink.name, drink%>
           <%= '%.2f' % drink.price.to_d%><br>
@@ -73,22 +21,26 @@
       </div>
 
       <div id="foods">
-        <h3>Food: </h3><br>
+        <h3>Food: </h3>
         <%@foods.each do |food|%>
         <li>
           <%=link_to food.name, food%>
           <%= '%.2f' % food.price.to_d%><br>
         </li>
         <%end%>
-      </div>
-      <div><%=link_to "Add More to Order", users_path%></div>
-      <div><%=link_to "Clear Cart", clear_cart_path%></div>
+      </div><br>
+      <div class="addmore"><%=link_to "Add More to Order", users_path%></div>
+      <div class="clearcart"><%=link_to "Clear Cart", clear_cart_path%></div>
 
 
       <hr>
       <p>Total <span class="price" style="color:black"><b><%= '%.2f' % @total_price %></b></span></p>
     </div>
+    <div class="checkoutwcard">
+    <h4 id="checkout"><%=link_to "Pay with Cash!", checkout_path %></h4>
+
+    <h4 id="checkout"><%=link_to "Pay with Card!", cardform_path %></h4></div>
   </div>
-</div>
+  </div>
 
 </body>

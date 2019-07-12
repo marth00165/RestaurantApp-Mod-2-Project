@@ -5,6 +5,11 @@ body {
   padding: 8px;
 }
 
+a {
+  text-decoration: none;
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -74,17 +79,7 @@ label {
   font-size: 24px;
 }
 
-.btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
+
 
 
 .checkoutform a {
@@ -103,15 +98,81 @@ label {
 }
 
 #checkout a {
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background: none;
+  margin: auto;
   background: #85C7F2;
   border-style: solid;
   border-color: orange;
+  text-decoration: none;
 }
 
 #checkout a:hover {
 
   border-color: black;
 }
+.addmore a {
+  text-decoration: none;
+}
+.clearcart a {
+  text-decoration: none;
+}
+
+/* unvisited link */
+.clearcart a:link {
+  color: #4CAF50
+}
+
+/* visited link */
+.clearcart a:visited {
+  color: #4CAF50
+}
+.addmore a:link {
+  color: #4CAF50
+}
+
+/* visited link */
+.addmore a:visited {
+  color: #4CAF50
+}
+
+#foods a:link {
+  color: #119DA4
+}
+
+/* visited link */
+#foods a:visited {
+  color: #119DA4
+}
+#drinks a:link {
+  color: #119DA4
+}
+
+/* visited link */
+#drinks a:visited {
+  color: #119DA4
+}
+
+#foods a:hover {
+  color: #313638;
+}
+
+
+#drinks a:hover {
+  color: #313638;
+}
+
+
+
+.checkoutwcard {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
 
 
 
@@ -130,6 +191,12 @@ span.price a {
   display: none;
 
 }
+#cartform {
+width: 1000px;
+
+justify-content: space-around;
+}
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
