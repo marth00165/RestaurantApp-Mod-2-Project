@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TODO:
 
-Things you may want to cover:
+* Ruby version 2.6.3
 
-* Ruby version
-
-* System dependencies
+* System dependencies - Bundle the required gems using Bundler
 
 * Configuration
 
-* Database creation
+* Database creation - Run rails db:create, then run rails db:migrate, then run rails db:seed
 
-* Database initialization
+* Legal stuffs:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Licensed under MIT License (https://github.com/PhilipSterling/RestaurantApp-Mod-2-Project/master/LICENSE.md)
