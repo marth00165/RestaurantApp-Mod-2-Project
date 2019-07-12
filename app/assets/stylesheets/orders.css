@@ -170,9 +170,7 @@ label {
 .checkoutwcard {
   display: flex;
   justify-content: flex-end;
-
 }
-
 .checkoutwcard a {
   display: inline-block;
   padding: 15px 25px;
@@ -194,6 +192,9 @@ label {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+
+
 
 
 
