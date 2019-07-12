@@ -76,11 +76,37 @@ button:hover {
 }
 
 .loginheader {
-  text-align: center;
-  color: white;
-  background: #85C7F2;
-  width: 200px;
 
+  text-align: center;
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  background-color: #85C7F2;
+  background: fit-content;
+  position: relative;
+  border-style: solid;
+  border-color: white;
+  text-shadow: black;
+
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:400px; bottom:200px;}
+  100% {background-color:white; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left: 400px; bottom:200px;}
+  100% {background-color:white; left:0px; top:0px;}
 }
 .createpage {
 
@@ -97,6 +123,8 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+
+
 
 .new_user {
   color: white;
