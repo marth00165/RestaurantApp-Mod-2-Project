@@ -11,7 +11,7 @@
 <%=image_tag(url_for(@drink.imgurl))%>
 
 <p><%= @drink.desc %></p>
-<p class="price"></p>Price Per Drink: <%=@drink.price%>
+<p class="price"></p>Price Per Drink: <%='%.2f' %  @drink.price%>
 
 
 <% if current_order.drinks.include? @drink%>

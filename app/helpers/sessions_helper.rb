@@ -20,7 +20,7 @@ module SessionsHelper
           @is_order = true #finds current order
         end
       end
-      return @is_order
+      return @is_order #returns true if there is a current order
     end
   end
   def current_order
